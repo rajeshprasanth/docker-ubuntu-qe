@@ -10,6 +10,7 @@ LABEL 	maintainer="Rajesh Prashanth Anandavadivel <rajeshprasanth@rediffmail.com
 # Creating user qe-test
 # 
 RUN	useradd -m -d /home/qe-test qe-test
+RUN	passwd -d qe-test
 #
 # Prepare for prerequisites
 #
@@ -22,4 +23,5 @@ RUN	apt-get --yes install wget curl
 RUN	mkdir -p /home/qe-test/espresso/espresso-6.4.1/bin
 #
 RUN	su qe-test 
-RUN	pwd
+RUN whoami
+RUN pwd
