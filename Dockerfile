@@ -24,6 +24,7 @@ RUN	mkdir -p /home/qe-test/espresso/espresso-6.4.1/bin
 RUN	su qe-test \
 	&& cd /home/qe-test/espresso/espresso-6.4.1/ \
 	&& wget https://gitlab.com/QEF/q-e/-/archive/qe-6.4.1/q-e-qe-6.4.1.tar.gz \
+	&& tar zxvf q-e-qe-6.4.1.tar.gz \
 	&& cd q-e-qe-6.4.1 && ./configure && make pw \
 	&& cp /home/qe-test/espresso/espresso-6.4.1/q-e-qe-6.4.1/PW/src/pw.x /home/qe-test/espresso/espresso-6.4.1/bin
 #
