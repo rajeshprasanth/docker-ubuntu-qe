@@ -31,4 +31,4 @@ RUN	cd /opt/espresso/espresso-6.4.1 \
 	&& echo "export PATH=$PATH:/opt/espresso/espresso-6.4.1/bin/" >> /.bashrc
 #
 RUN	su qe-test \
-	echo "export PATH=$PATH:/opt/espresso/espresso-6.4.1/bin/" >> ~/.bashrc
+	&& echo "export PATH=$PATH:/opt/espresso/espresso-6.4.1/bin/" >> ~/.bashrc
