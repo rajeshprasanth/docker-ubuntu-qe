@@ -17,6 +17,7 @@ RUN	passwd -d qe-test
 RUN	apt-get update
 RUN	apt-get --yes install tar sed gawk gfortran gcc g++ make
 RUN	apt-get --yes install wget curl
+RUN	apt-get autoremove -y
 #
 # Creating Quantum Espresso Directory
 #
