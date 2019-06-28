@@ -15,7 +15,7 @@ RUN	passwd -d qe-test
 # Prepare for prerequisites
 #
 RUN	apt-get update
-RUN	apt-get --yes install tar sed gawk gfortran gcc g++ make
+RUN	apt-get --yes install tar sed gawk gfortran gcc g++ make xz-utils
 RUN	apt-get --yes install wget curl
 RUN	apt-get autoremove -y
 #
