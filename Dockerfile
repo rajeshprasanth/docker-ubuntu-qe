@@ -33,3 +33,14 @@ RUN	cd /opt/espresso/espresso-6.4.1 \
 #
 RUN	su qe-test \
 	&& echo "export PATH=$PATH:/opt/espresso/espresso-6.4.1/bin/" >> ~/.bashrc
+#
+# Create aflow Directory
+#
+RUN mkdir -p /opt/aflow/aflow.3.1.224/bin \
+	&& cd /opt/aflow/aflow.3.1.224 \
+	&& wget http://materials.duke.edu/AFLOW/aflow.3.1.224.tar.xz \
+	&& tar Jxvf aflow.3.1.224.tar.xz \
+	&& cd aflow.3.1.224 \ 
+	&& make \
+	&& cp aflow /opt/aflow/aflow.3.1.224/bin \
+	&& rm -rf /opt/aflow/aflow.3.1.224/aflow.3.1.224
